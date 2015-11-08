@@ -7,12 +7,12 @@ end
 #wrap it on one word
 
 def translate_word(word)
-	vowel = ["a", "e", "i", "o", "u"]
+	vowels = ["a", "e", "i", "o", "u"]
 	word = word.split(' ')
-	if (vowel.include?(word[0]))
+	if (vowels.include?(word[0]))
 		word.join + "ay"
 	else 
-		until (!vowel.include?(word[0]))
+		until (!vowels.include?(word[0]))
 			word.rotate!
 			i += 1
 			# word.rotate!
